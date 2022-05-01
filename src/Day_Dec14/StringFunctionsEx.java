@@ -1,0 +1,163 @@
+package Day_Dec14;
+
+public class StringFunctionsEx {
+
+	public static void main(String[] args) {
+	
+		
+		String s = "1Cat eats rat";
+		boolean res = s.startsWith("1");    // Cat == cat   67=99
+		System.out.println("res : " + res);
+		res = s.endsWith("t");    
+		System.out.println("res : " + res);
+		
+		String s1 = "VIRAT";  //  virat
+		String s2 = "Kohli";  //  abc
+		
+		res = s1.equals(s2);
+		System.out.println("res : " + res);
+		
+		res = s1.equalsIgnoreCase(s2);    //true
+		System.out.println("resIEC : " + res);
+		
+		if (!res==false)     // res==true
+			System.out.println("Cyber");
+		else
+			System.out.println("Success");
+		
+		
+		String str = s1.concat(s2);
+		System.out.println("s1:" +s1);
+		System.out.println("s2:" +s2);
+		System.out.println(str);
+		
+
+		System.out.println("s1.concat(s): " + s1.concat(s2));
+		
+		
+		
+		System.out.println("***address :" + System.identityHashCode(s));
+		System.out.println("s1.isBlank(): " + s1.isBlank());
+		s1="";
+		System.out.println("s1.isBlank(): " + s1.isBlank());
+		System.out.println("address :" + System.identityHashCode(s));
+		
+		
+		s1 ="        ";
+		System.out.println("s1.isBlank(): " + s1.isBlank());
+		System.out.println("address :" + System.identityHashCode(s));
+			
+		s1 ="T        ";
+		System.out.println("s1.isBlank(): " + s1.isBlank());
+		System.out.println("address :" + System.identityHashCode(s));
+		
+		s1 = "  ";
+		System.out.println(s1.length());
+		System.out.println("address :" + System.identityHashCode(s));
+		
+		
+		s1 ="";
+		System.out.println("s1.isEmpty(): " + s1.isEmpty());
+		
+		s1 ="     ";
+		System.out.println("s1.isEmpty(): " + s1.isEmpty());
+		
+		s1 = "Google oath";
+		
+		int ind = s1.lastIndexOf('o');
+		System.out.println(ind);   //7
+		
+		 // exercises 
+		
+		str = s1.replace("o", "Z");
+	//	System.out.println(s1);
+		System.out.println(str);
+		
+		
+		s1 = "aaa";
+		str = s1.replace("aa", "b");
+		System.out.println("str : " + str);
+		
+		s1 = "aaaa";
+		str = s1.replace("aa", "b");
+		System.out.println("str : " + str);
+		 
+		int i = 100;
+		
+		System.out.println(i + 200);
+		
+		System.out.println(String.valueOf(i) + 200);
+		
+		String s4 = "100";
+		
+		System.out.println(s4+200); // 100200
+		
+		System.out.println(Integer.parseInt(s4)+300);
+		
+		s4 = "100asd";
+		//System.out.println(Integer.parseInt(s4)+500);
+
+		s4="156.43";
+		System.out.println(Float.parseFloat(s4)+1);
+		
+		s4="     Cyber     ";
+		System.out.println("s4      :" + s4 +"****");
+		System.out.println("s4.strip:" + s4.strip() +"****");
+		
+		System.out.println("s4     :" + s4 +"****");
+		System.out.println("s4.trim:" + s4.trim() +"****");
+		
+		//String.format
+		s4 = "India";
+		System.out.println("s4:" + s4);
+		System.out.println("String.format(\"%10s\", s4):" + String.format("%10s", s4));
+		System.out.println("String.format(\"%1s\", s4):" + String.format("%1s", s4));
+		System.out.println("String.format(\"%-10s\", s4):" + String.format("%-10s", s4));
+		i = 12345;
+		System.out.println(String.format("%8d", i));
+		System.out.println(String.format("%-8d", i));
+		
+		float f = 12.345f;
+		System.out.println(String.format("%8.3f", f));
+		System.out.println(String.format("%-8.3f", f));
+		
+		System.out.println(String.format("%8.1f", f));
+		System.out.println(String.format("%-8.1f", f));
+		
+		s4="Google oath";
+		str = s4.replaceFirst("o", "ZZZZ");
+		System.out.println("str : " + str);
+		str = s4.replace("o", "ZZZZ");
+		System.out.println("str : " + str);
+		
+		String s6 = "Viart";
+		String s7 = "Kohli";
+		String s8 = "player";
+		
+		String s9 = String.join("      ", s6,s7,s8);
+		System.out.println(s9);
+		
+		s8 = null;
+		
+		//int[] arr = new int[6];
+	//	arr = null;
+		
+		if (null == null)
+			System.out.println("null == null");
+		else
+			System.out.println("null <> null");
+		
+		s6=null;
+		s7=null;
+		System.out.println("s6 null == s7 null");	
+		 if (s6.equals(s7))   //content address
+			System.out.println("s6 content cyber == s7 null");
+		 else
+			System.out.println("s6 content cyber  <> s6 null");
+			
+		s6=null;
+	//	System.out.println("s6.charAt(0): " + s6.charAt(0));
+		
+	}
+
+}

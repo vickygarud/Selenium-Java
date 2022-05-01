@@ -1,0 +1,29 @@
+package java_constructor;
+
+public class Demo {
+	
+	Demo()
+	{
+		this(100);
+		System.out.println("Inside Default/zero argument constructor constructor");	
+	}
+	
+	Demo(int a)
+	{
+		System.out.println("inside Parameterized/ argument constructor: "+a);
+	}
+	
+	static void m1()
+	{
+		System.out.println("inside m1 method");
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Start");
+		Demo d1 = new Demo();
+		Demo d2 = new Demo(10);
+		m1();
+		System.out.println("End");
+	}
+
+}

@@ -1,0 +1,169 @@
+package project;
+
+import java.util.Scanner;
+
+public class Customer {
+	
+	public static void main(String[] args) {
+		BankHdfc ob = new BankHdfc();
+		// BankHdfc ob1 = new BankHdfc("John Snow",22033002,30000.00);
+
+		Scanner sc = new Scanner(System.in);
+
+		
+		
+		System.out.println("1 Create Account");
+		System.out.println("2 Login Account");
+		String ch= sc.nextLine();
+
+		switch (ch) {
+		case "1":
+			ob.accOpen();
+			break;
+		case "2":
+			System.out.println("work in progress...");
+			break;
+		default:
+			System.out.println("\nInvalid Option\n");
+			break;
+
+		}
+		
+		
+		// to perform operations
+		int option;
+		do {
+			System.out.println("\nSelect option :\n" 
+					+ "Account details  : 1\n"
+					+ "Account Balance  : 2\n"
+					+ "To withdrawn     : 3\n" 
+					+ "To Deposit       : 4\n" 
+					+ "To Exit Task     : 5");
+			 option = sc.nextInt();
+			switch (option) {
+
+			case 1:
+				ob.accDetails();
+				break;
+			case 2:
+				ob.getBalance();
+				break;
+			case 3:
+				System.out.println("Enter Amount to withdrawn: ");
+				double withdrawn = sc.nextDouble();
+				ob.withdrawBal(withdrawn);
+				break;
+			case 4:
+				System.out.println("\nEnter Amount to Deposit: ");
+				double credit = sc.nextDouble();
+				ob.balDeposit(credit);
+				break;
+			case 5:
+				System.out.println("Task Quit..!!");
+				break;
+			default:
+				System.out.println("Invalid Option..!!");
+				break;
+			}
+
+		}while (option!= 5);
+		
+
+		sc.close();
+
+	}
+
+}
+
+/*
+
+||    Welcome to Hdfc Bank    ||
+
+1 Create Account
+2 Login Account
+1
+
+ || Enter Customer Information ||
+
+Enter Customer Name      : Jack Sparrow
+Enter Account Number     : 161661
+Enter Account to Deposit : 50000.51
+
+Account created Successfully..!
+
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+1
+Bank Name      : HDFC Bank
+Customer Name  : Jack Sparrow
+Account Number : 161661
+Account Balance: 50000.51
+
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+2
+Account Balance: 50000.51
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+3
+Enter Amount to withdrawn: 
+50000
+
+Account withdrawn Successfully..!
+
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+2
+Account Balance: 0.5100000000020373
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+4
+
+Enter Amount to Deposit: 
+50000
+
+Amount Deposit Successfully..!!
+
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+2
+Account Balance: 50000.51
+
+Select option :
+Account details  : 1
+Account Balance  : 2
+To withdrawn     : 3
+To Deposit       : 4
+To Exit Task     : 5
+
+ */

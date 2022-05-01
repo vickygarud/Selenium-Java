@@ -1,0 +1,29 @@
+package Day_Jan06;
+
+public class ConstructorEx {
+	float b=400f;
+	String str="world";
+	ConstructorEx()
+	{
+		System.out.println("Inside default constructor");
+	}
+	
+	ConstructorEx(String str,float a)
+	{
+		this("this keyword");
+		System.out.println("Inside Parameterized constructor "+str+"="+a);
+	}
+	ConstructorEx(String str)
+	{
+		System.out.println("calling constructor using this(): "+str);
+	}
+
+	public static void main(String[] args) {
+		
+		ConstructorEx ce = new ConstructorEx();
+		ConstructorEx ce1 = new ConstructorEx(ce.str,ce.b);
+		new ConstructorEx(ce1.str);
+	}
+
+}
+// Parameterized

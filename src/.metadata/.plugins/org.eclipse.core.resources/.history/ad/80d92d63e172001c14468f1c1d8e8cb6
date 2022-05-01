@@ -1,0 +1,42 @@
+package Day_Dec29;
+
+ class Demo
+{
+	static int a = 20;   // static variable declare within class and can access with the help of className
+	//System.out.println("Inside Demo class");
+
+}
+
+class xyz 
+{
+
+	public static void print(int a)
+	{
+		System.out.println("In class xyz and in print method value of a: "+Demo.a);
+		int b = 30;
+		
+		int sum=a+b;
+		System.out.println("Addition of a + b = "+sum);
+
+	}
+
+}
+
+public class abc
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("In Main Method");
+		
+		System.out.println("Value of a is: "+Demo.a);   // Print static variable a with the help of class name 
+		
+		xyz.print(Demo.a);   							 // call print function using ClassName 
+		
+		System.out.println("End of main Method");
+	}
+
+	
+}
+
+
+		

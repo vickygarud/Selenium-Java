@@ -124,7 +124,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
+							</suiteXmlFiles>
 					</configuration>
 				</plugin>
 				<plugin>

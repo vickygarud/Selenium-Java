@@ -20,14 +20,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class Listeners extends BaseClass implements ITestListener, ISuiteListener {
 
 	@Override
-	public void onStart(ISuite suite)  {
+	public void onStart(ISuite suite) {
 
 		String screenshot = System.getProperty("user.dir") + "\\Screenshot\\";
 		String extentReport = System.getProperty("user.dir") + "\\Reports\\";
 		createFolder(screenshot);
 		createFolder(extentReport);
 		String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy-hh-mm-ss"));
-		htmlReporter = new ExtentSparkReporter(extentReport + "OrangeHrmTestReport"+date+".html");
+		htmlReporter = new ExtentSparkReporter(extentReport + "OrangeHrmTestReport" + date + ".html");
 
 		htmlReporter.config().setDocumentTitle("Automation Report");
 		htmlReporter.config().setReportName("Functional Report");
@@ -45,6 +45,8 @@ public class Listeners extends BaseClass implements ITestListener, ISuiteListene
 	@Override
 	public void onFinish(ISuite suite) {
 		// TODO Auto-generated method stub
+
+		driver.quit();
 		ISuiteListener.super.onFinish(suite);
 	}
 

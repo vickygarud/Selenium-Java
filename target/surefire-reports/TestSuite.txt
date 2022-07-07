@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.342 s <<< FAILURE! - in TestSuite
+testLoginInsertCorrectUsernameAndPassword(login.LoginTest)  Time elapsed: 11.89 s  <<< FAILURE!
+java.lang.NullPointerException
+	at login.LoginTest.testLoginInsertCorrectUsernameAndPassword(LoginTest.java:40)
+

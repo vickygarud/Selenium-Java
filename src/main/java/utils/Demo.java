@@ -33,9 +33,6 @@ public class Demo {
 				sheet = wb.getSheetAt(i);
 		}
 
-		int rows = sheet.getLastRowNum();
-
-		int cols = sheet.getRow(0).getPhysicalNumberOfCells();
 
 	}
 

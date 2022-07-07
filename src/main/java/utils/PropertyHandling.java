@@ -2,7 +2,6 @@ package utils;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +20,7 @@ public class PropertyHandling {
 		property.load(inputFile);
 		inputFile.close();
 
-		FileOutputStream output = new FileOutputStream("C:\\java\\OrangeHrmAutomationProject\\config.properties",true);
+//		FileOutputStream output = new FileOutputStream("C:\\java\\OrangeHrmAutomationProject\\config.properties",true);
 //		property.setProperty("browser", "edge");
 //		property.store(output, "Comment");
 	}

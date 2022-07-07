@@ -106,9 +106,6 @@
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
-					<configuration>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -124,7 +121,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
-							</suiteXmlFiles>
+						</suiteXmlFiles>
 					</configuration>
 				</plugin>
 				<plugin>

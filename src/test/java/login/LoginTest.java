@@ -24,9 +24,7 @@ public class LoginTest extends BaseClass {
 	@Test(priority = 1)
 	public void testLoadHomepage() throws IOException {
 		prop = new PropertyHandling();
-		getBrowserInstance(prop.getProperty("browser"));
-		
-		
+		getBrowserInstance(System.getProperty("browser"));
 		System.out.println(prop.getProperty("orangeHrmUsername"));
 		driver.navigate().to(prop.getProperty("orgHrmUrl"));
 		Assert.assertEquals(prop.getProperty("PageTitle"), driver.getTitle(), "Incorrect page's tittle.");
@@ -37,7 +35,7 @@ public class LoginTest extends BaseClass {
 		loginPage = new LoginPage();
 		dashboard = new DashBoardPage();
 		prop = new PropertyHandling();
-		getBrowserInstance(prop.getProperty("browser"));
+		getBrowserInstance(System.getProperty("browser"));
 		driver.navigate().to(prop.getProperty("orgHrmUrl"));
 		loginPage.login(prop.getProperty("orangeHrmUsername"), prop.getProperty("orangeHrmPassword"));
 		assertTrue(dashboard.getWelcomeText().contains(LoginMessages.WELCOMEMSG));

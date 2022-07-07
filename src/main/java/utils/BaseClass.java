@@ -1,16 +1,10 @@
 package utils;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-
-import org.apache.poi.ss.usermodel.Workbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,6 +30,8 @@ public class BaseClass {
 	 */
 
 	public static void getBrowserInstance(String browser) {
+
+//		browser = System.getProperty("browser");
 
 		try {
 			switch (browser) {
